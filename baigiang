@@ -1,0 +1,99 @@
+- Dang nhap bang mang xa hoi:
+- Quyen admin, user
+
+
++ Trong thuc te:
+	+ Cac roles: admin, user
+	+ Cac role co nhung quyen co dinh:
+		+ Admin thi tao san pham duoc
+		+ Admin thi co the viet bai duoc
+		+ user thi them vao gio hang duoc
+
+	+ Phan quyen dong:
+		+ Admin co the cho 1 user nao do 1 quyen nao do
+		+ Admin co the cho user ten la nguyenbv quyen viet bai
+
+
+user co role 
+kieu don gian nhat: 1 user thi chi co 1 role
+
+
+1 bai viet thi co nhieu comment: eloquent relasionship
+
++ Tao roles:
+    + migration
+    + tao 1 bang roles
+    + php artisan make:migration
+    + tao seeder: tao ra 2 role
+    + middleware:
+        + nhom cac phan lai de lam gi do
+    + php artisan make:middleware 
+
+
+Tao ra mot package composer cho rieng minh
+- xu ly viec phan role
+
+
+Bai tap:
++ Lam phan dang nhap bang mang xa hoi
++ Role
+
+
+Category:
+	+ Cache:
+
+
+San pham xem nhieu nhat:
+- Schedule: moi ngay cache 10 san pham duoc xem nhieu nhat
+
+
+* Luu so luot xem:
+- Luot xem: luu vao bang san pham
+- Khi co nguoi xem san pham: tang len 1 => update vao db
+- Cache so luot xem => redis
+- Khi restart server => luu tat ca cac so luot xem => db
+
+- Thi thoang: 1 ngay 1 lan => luu so luot xem xuong db
+	+ Schedule
+	+ Queue
+
+Bao bao:
++ Bao cao ngay
+
+
++ Quan ly danh muc:
+	+ Them sua
+	+ Xoa danh muc:
+		+ Xoa luon
+			+ Xoa het cac san pham thuoc danh muc do
+			+ Xoa danh muc
+			=> Transaction
+
+		+ Di chuyen san pham den danh muc khac => xoa
+			+ di chuyen
+			+ xoa
+
+Cac loai cache:
+	+ file:
+		+ doc: cao
+		+ ghi: cham
+		+ chi phi re
+		+ khong bi mat du lieu
+	+ redis: ram
+		+ doc: nhanh
+		+ ghi: nhanh
+		+ khi server bi loi => mat du lieu
+		+ chi phi: cao
+		+ luu y so luong
+	+ cache len cloud:
+		+ aws
+		+ chi phi cao
+		+ co the scale
+
+Setting:
+	+ forever
+	+ Bam nut luu => cache lai
+
+
+Tren may tinh => gen ra mot private key => khoa bi mat
+public key => khoa cong khai
