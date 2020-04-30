@@ -1,4 +1,4 @@
-@extends('adminlte::page')
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -51,10 +51,6 @@
                             </div>
                         </div>
                         <div class="form-group row mb-0">
-                            <a href="{{ route('loginGoogle') }}">Dang nhap bang google</a><br>
-                            <a href="{{ route('loginFacebook') }}">Dang nhap bang facebook</a><br>
-                        </div>
-                        <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
@@ -66,8 +62,30 @@
                                     </a>
                                 @endif
                             </div>
+                        </div>                    
+                        </form>
+                        <div >
+                            <div style="text-align: center; margin: 20px 0;">
+                                <span class="label-text">__________________     or connect with     __________________</span>
+                            </div>
+                            <ul class="card-columns" style="display: flex; justify-content: center;padding:0;">
+                                <li class="card" style="width: 44px; margin:0 20px">
+                                    <a href="{{ route('loginFacebook') }}">
+                                        <img class="card-img"  src="{{ url('/images/facebook.svg') }}">
+                                    </a>
+                                </li>
+                                <li class="card" style="width: 44px; margin:0 20px">
+                                    <a href="{{ route('loginGoogle') }}">
+                                        <img class="card-img"  alt="Login with Google" src="{{ url('/images/google.svg') }}">
+                                    </a>
+                                </li>
+                                <li class="card" style="width: 44px; margin:0 20px">
+                                    <a href="#">
+                                        <img class="card-img" alt="Login with Google" src="{{ url('/images/github.svg') }}">
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                    </form>
                 </div>
             </div>
         </div>
