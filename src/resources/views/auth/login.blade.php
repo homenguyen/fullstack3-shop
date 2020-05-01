@@ -80,8 +80,8 @@
                                     </a>
                                 </li>
                                 <li class="card" style="width: 44px; margin:0 20px">
-                                    <a href="#">
-                                        <img class="card-img" alt="Login with Google" src="{{ url('/images/github.svg') }}">
+                                    <a href="{{ route('loginGithub') }}">
+                                        <img class="card-img" alt="Login with Github" src="{{ url('/images/github.svg') }}">
                                     </a>
                                 </li>
                             </ul>
