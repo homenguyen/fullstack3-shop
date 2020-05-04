@@ -28,6 +28,13 @@ Route::get('/login-facebook', function() {
 
 Route::get('/facebook-callback', 'Auth\SocialAuthController@loginFacebookCallback')->name('facebookCallback');
 
+// github login
+Route::get('/login-github', function() {
+    return Socialite::with('Github')->redirect();
+})->name('loginGithub');
+
+Route::get('/github-callback', 'Auth\SocialAuthController@loginGithubCallback')->name('githubCallback');
+
 
 // admin route
 Route::get('/admin', 'AdminController@home')->middleware('role:admin')->name('adminHome');

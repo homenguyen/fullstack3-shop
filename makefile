@@ -13,6 +13,8 @@ go-inside-php-container:
 	- docker-compose exec php sh
 install:
 	- sudo docker-compose up -d
+	- sudo docker-compose run npm install
+	- sudo docker-compose run composer composer install
 	- sudo docker-compose run npm run prod
 	- sudo docker-compose run php php artisan migrate
 	- sudo docker-compose run php php artisan db:seed

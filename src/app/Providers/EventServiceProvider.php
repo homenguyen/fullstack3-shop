@@ -22,6 +22,7 @@ class EventServiceProvider extends ServiceProvider
             // add your listeners (aka providers) here
             'SocialiteProviders\\Google\\GoogleExtendSocialite@handle',
             'SocialiteProviders\\Facebook\\FacebookExtendSocialite@handle',
+            'SocialiteProviders\\GitHub\\GitHubExtendSocialite@handle',
         ],
     ];
 
