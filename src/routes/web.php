@@ -40,6 +40,20 @@ Route::resource(
         'names' => 'adminCategory'
     ]
 );
+//admin product
+Route::prefix('admin')->group(function () {
+    Route::prefix('product')->group(function () {
+        Route::get('/', 'Admin\ProductAdminController@index')->name('list.product');
+        Route::get('/create', 'Admin\ProductAdminController@create')->name('create.product');
+        Route::post('/create', 'Admin\ProductAdminController@store');
+        Route::get('/edit/{id}', 'Admin\ProductAdminController@edit')->name('edit.product');
+        Route::post('/edit/{id}', 'Admin\ProductAdminController@update');
+        Route::delete('/delete/{id}', 'Admin\ProductAdminController@destroy')->name('delete.product');
+
+    });
+
+});
+
 Route::get('/admin/category/delete/{id}', 'Admin\CategoryAdminController@deleteForm')->name('adminCategoryDeleteForm');
 
 // User routes

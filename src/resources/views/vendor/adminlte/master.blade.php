@@ -24,7 +24,7 @@
     @else
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     @endif
-	
+
     @yield('meta_tags')
 
     @if(config('adminlte.use_ico_only'))
@@ -54,15 +54,17 @@
 @yield('body')
 
 @if(! config('adminlte.enabled_laravel_mix'))
-<script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
-<script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ asset('vendor/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('vendor/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+    <script src="{{ asset('vendor/adminlte/dist/js/sweetalert.min.js') }}"></script>
+    <script src="{{ asset('vendor/adminlte/dist/js/script.js') }}"></script>
 
-@include('adminlte::plugins', ['type' => 'js'])
+    @include('adminlte::plugins', ['type' => 'js'])
 
-@yield('adminlte_js')
+    @yield('adminlte_js')
 @else
-<script src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ mix('js/app.js') }}"></script>
 @endif
 
 </body>

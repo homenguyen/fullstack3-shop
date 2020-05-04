@@ -221,7 +221,7 @@ return [
         ],
         [
             'text' => 'product_list',
-            'url'  => 'admin/settings',
+            'url' => 'admin/product',
             'icon' => 'fas fa-fw fa-list',
         ],
         [
